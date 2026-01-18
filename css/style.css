@@ -8,6 +8,7 @@ body {
     justify-content: center;
     gap: 10px;
     min-height: auto;
+    background-color: black;
 }
 
 
@@ -29,6 +30,7 @@ body {
     
 }
 
+/*
 .section {
 
     display: flex;
@@ -39,6 +41,7 @@ body {
     width: 100%;
 
 }
+*/
 
 
 .main {
@@ -78,6 +81,7 @@ body {
 .aside {
 
     display: flex;
+    flex-direction: column;
     color: black;
     background-color: blue;
     justify-items: center;
@@ -86,8 +90,6 @@ body {
     font-size: 50px;
     border-radius: 20px;
     border: 3px solid black;
-    height: 50px;
-    width: 350px;
     width: 100%;
     position: relative;
     float: left;
@@ -108,8 +110,30 @@ body {
     border-radius: 20px;
     border: 3px solid black;
     height: 100px;
-    width: 350px;
     width: 100%;
 
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media screen and (min-width: 950px) {
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .aside {
+        width: 30%;
+        order: 1;
+    }
+
+    .main {
+        width: 70%;
+        order: 2;
+    }
+}
